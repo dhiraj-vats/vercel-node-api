@@ -17,12 +17,12 @@ export default function handler(req, res) {
       const password = parsed.get("password");
 
       // Bachon ke simple login
-      if(username === "kid" && password === "123") {
+      if(username === "user" && password === "123") {
         // redirect to dashboard
         res.writeHead(302, { Location: "/api/dashboard" });
         res.end();
       } else {
-        res.status(200).send("Login Failed  Try Username: kid Password: 123");
+        res.status(200).send("Login Failed");
       }
     });
   }
