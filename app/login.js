@@ -19,7 +19,7 @@ export default function handler(req, res) {
       // Bachon ke simple login
       if(username === "user" && password === "123") {
         // redirect to dashboard
-        res.writeHead(302, { Location: "/api/dashboard" });
+        res.writeHead(302, { Location: "/app/dashboard" });
         res.end();
       } else {
         res.status(200).send("Login Failed");
